@@ -1,0 +1,20 @@
+.about {
+    margin-bottom:60px;
+
+    @media screen and (min-width: 600px) {
+        display:flex;
+    }
+
+    .about-pic {
+        img {
+            width:100%;
+            @media screen and (min-width: 600px) {
+                width:auto;
+                max-width:350px;
+            }
+        }
+        @media screen and (min-width: 600px) {
+            margin-right: 10%;
+        }
+    }
+}

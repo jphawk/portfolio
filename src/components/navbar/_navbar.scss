@@ -1,0 +1,14 @@
+.navbar-menu {
+    padding: 20px 0;
+    display:flex;
+    justify-content: flex-end;
+    &-item {
+        margin-right:20px;
+        &:last-child{
+            margin-right:0;
+        }
+        @media screen and (min-width: 600px) {
+            margin-right:60px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.follow {
+    background-color:pink;
+    &-container {
+        padding:60px 0;
+        @media screen and (min-width: 600px) {
+            display:flex;
+            align-items: baseline;
+            justify-content: flex-end;
+        }
+    
+        a {
+            margin-left: 40px;
+            &:first-child {
+                margin-left:0;
+                @media screen and (min-width: 600px) {
+                    margin-left:40px;
+                }
+            }
+        }
+    }
+}

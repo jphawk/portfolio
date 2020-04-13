@@ -8,5 +8,6 @@ import Hero from "./hero";
 import Follow from "./follow";
 import Footer from "./footer";
 import Logo from "./logo";
+import Card from "./card";
 
-export { About, Header, Hero, Follow, Footer, Logo };
+export { About, Card, Header, Hero, Follow, Footer, Logo };
