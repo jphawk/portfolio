@@ -1,13 +1,12 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
     return (
         <div className="navbar-menu">
-            <Link className="navbar-menu-item" to="/">Home</Link>
-            <Link className="navbar-menu-item" to="/work">Work</Link>
-            <Link className="navbar-menu-item" to="/#about">About</Link>
-            <Link className="navbar-menu-item" to="/#follow">Follow</Link>
+            <NavLink className="navbar-menu-item home" exact to="/" activeClassName="active">Home</NavLink>
+            <NavLink className="navbar-menu-item" exact to="/work" activeClassName="active">Work</NavLink>
+            <NavLink className="navbar-menu-item" to="/about" activeClassName="active">About</NavLink>
         </div>
     );
 };

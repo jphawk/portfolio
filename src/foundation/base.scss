@@ -1,6 +1,10 @@
+html {
+    overflow: hidden;
+}
+
 body, 
 table { 
-    color: #000000; 
+    color: white; 
     font-size: 16px;
     font-family: "Source Sans Pro", sans-serif; 
     font-weight: 400; 
@@ -8,7 +12,51 @@ table {
     margin:0;
 }
 
-.container, .header, .follow-container {
+body {
+    background-color:#000b29;
+    position:relative;
+}
+
+#portfolio {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x:hidden;
+    overflow-y:auto;
+    height:100vh;
+}
+
+.plx {
+    width:100vw;
+    height:92vh;
+    background-image:url('../images/parallax1.png');
+    background-size: 110%;
+    z-index:-1;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 1;
+    transform-style: preserve-3d;
+    transform:translateZ(-1px) scale(2);
+
+    &-internal {
+        width: 100vw;
+        height:120vh;
+        top:0;
+        left:0;
+        bottom:0;
+        z-index: 1;
+        opacity: 0.2;
+        position: absolute;
+        background-size: 110%;
+        box-sizing: border-box;
+        transform-style: preserve-3d;
+        background-image:url('../images/parallax2.png');
+        background-repeat: repeat-y;
+        transform:translateZ(-2px) scale(2.3);
+    }
+}
+
+.container, .header {
     margin:0 auto;
     max-width: 1140px;
     padding: 0 20px;
@@ -21,7 +69,24 @@ img {
     width:100%;
 }
 
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.15em;
+    margin:0 0 0.5rem;
+}
+
 a {
-    color:black;
+    color:white;
     text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }

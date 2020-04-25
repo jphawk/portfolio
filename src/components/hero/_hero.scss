@@ -1,6 +1,21 @@
 .hero {
-    margin-bottom: 60px;
+    height:85vh;
     &-pic {
-        
+        color:#000b29;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        &-text {
+            padding:120px 0 0;
+            position:relative;
+            max-width: 1240px;
+            margin:0 auto;
+        }
+        img {
+            width: 58%;
+            position:absolute;
+            z-index:0;
+        }
     }
 }

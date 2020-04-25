@@ -4,6 +4,9 @@
     justify-content: flex-end;
     &-item {
         margin-right:20px;
+        &.home.active {
+            display:none;
+        }
         &:last-child{
             margin-right:0;
         }
