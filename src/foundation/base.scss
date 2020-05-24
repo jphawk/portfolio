@@ -1,10 +1,6 @@
-html {
-    overflow: hidden;
-}
-
 body, 
 table { 
-    color: white; 
+    color: #F5F8F2; 
     font-size: 16px;
     font-family: "Source Sans Pro", sans-serif; 
     font-weight: 400; 
@@ -12,57 +8,132 @@ table {
     margin:0;
 }
 
+/* Animation */
+
+$white: #fff;
+$lightblue: #10359C;
+$green: #095C11;
+$blue: #000B29;
+$violet: #A11040;
+$yellow:#D9A116;
+$tran-speed: 120s;
+
+@keyframes changeBg{
+    0%{
+        background: $blue;
+    }
+    20%{
+        background: $green;
+    }
+    40%{
+        background: $yellow;
+    }
+    60%{
+        background: $violet;
+    }
+    80%{
+        background: $lightblue;
+    } 
+}
+
+// Particle setting
+$count: 25;
+@media screen and (min-width: 600px) {
+    $count: 90;
+}
+
+$distance: 100vh;
+$bubble-size: 5;
+$min-speed: 6000;  // ms
+$max-speed: 18000; // ms
+$max-delay: 12000; // ms   
+
 body {
-    background-color:#000b29;
+    background-color: $blue;
+    animation: changeBg 120s alternate;
+    animation-iteration-count:infinite;
+    transform: translateZ(0);
+    will-change: contents;
     position:relative;
+    height:100vh;
+    overflow-x: hidden;
+    @media screen and (min-width: 600px) {
+        height:110vh;
+    }
 }
 
 #portfolio {
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-x:hidden;
-    overflow-y:auto;
-    height:100vh;
+    overflow:hidden;
 }
 
-.plx {
-    width:100vw;
-    height:92vh;
-    background-image:url('../images/parallax1.png');
-    background-size: 110%;
-    z-index:-1;
+.bottom-particles{
     position: absolute;
-    top:0;
-    left:0;
-    opacity: 1;
-    transform-style: preserve-3d;
-    transform:translateZ(-1px) scale(2);
-
-    &-internal {
-        width: 100vw;
-        height:120vh;
-        top:0;
-        left:0;
-        bottom:0;
-        z-index: 1;
-        opacity: 0.2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .bubble{
+        opacity:0;
         position: absolute;
-        background-size: 110%;
-        box-sizing: border-box;
-        transform-style: preserve-3d;
-        background-image:url('../images/parallax2.png');
-        background-repeat: repeat-y;
-        transform:translateZ(-2px) scale(2.3);
+        background-color:rgba($white, 0.5);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius:50%;
+
+        @for $i from 1 through $count{
+            $speed: random($max-speed) + 0ms;
+            $size: random($bubble-size) + 0rem;
+        @if $speed < $min-speed{
+            $speed: $min-speed + 0ms;
+        }
+            
+            &:nth-child(#{$i}){
+                left: random(100) + 0%;
+                animation: blow $speed infinite;
+                width:$size;
+                height:$size;
+                will-change: transform, opacity;
+                animation-delay: random($max-delay) + 0ms;
+                transform: translateZ(0);
+            }
+        }  
+    }
+}
+  
+@keyframes blow {
+     0% {
+        opacity: 0;
+        transform:translate(0, 0);
+     }
+     20% {
+        opacity: 0.3;
+     }
+     70% { 
+        opacity: 1;
+     }
+     100% {
+        opacity: 0;
+        transform:translate(0, -$distance) scale(.8);
+     }
+}
+
+
+
+
+.container, .navbar-menu {
+    margin:0 auto;
+    padding: 20px;
+    @media screen and (min-width: 600px) {
+        padding:40px;
     }
 }
 
-.container, .header {
-    margin:0 auto;
-    max-width: 1140px;
-    padding: 0 20px;
-    @media screen and (min-width: 600px) {
-        padding:0 40px;
-    }
+.navbar-menu {
+    max-width: 1240px;
+}
+
+.container {
+    max-width: 800px;
+    color:#000b29;
 }
 
 img {
@@ -70,13 +141,23 @@ img {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
     line-height: 1.15em;
     margin:0 0 0.5rem;
+    @media screen and (min-width: 600px) {
+        font-size: 3.5rem;
+    }
+}
+
+h2{
+    font-size: 1.25rem;
+    @media screen and (min-width: 600px) {
+        font-size: 1.5rem;
+    }
 }
 
 a {
-    color:white;
+    color:#F5F8F2;
     text-decoration: none;
     &:hover {
         text-decoration: underline;
@@ -89,4 +170,10 @@ a {
 
 .hide {
     display: none;
+}
+
+.page-main {
+    background-color: #F5F8F2;
+    position:relative;
+    z-index:10;
 }
