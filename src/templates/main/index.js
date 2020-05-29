@@ -1,6 +1,7 @@
 import React from 'react';
 import About from '../../components/about';
 import Hero from '../../components/hero';
+import Work from '../../components/work';
 import Follow from '../../components/follow';
 
 function MainPage() {
@@ -8,7 +9,10 @@ function MainPage() {
     <div className="page">
       <Hero page="main"/>
       <div className="page-main">
-        <About />
+        <div className="page-main-container">
+          <Work />
+          <About />
+        </div>
       </div>
       <Follow page="main"/>
     </div>

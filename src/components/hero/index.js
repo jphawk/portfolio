@@ -1,9 +1,6 @@
 import React from 'react';
 
 function Hero(props) {
-    /*const element = [`url("./images/element1.svg")`, `url("./images/element2.svg")`, `url("./images/element3.svg")`, `url("./images/element4.svg")`, `url("./images/element5.svg")`];
-    const random_class = element[Math.floor(Math.random() * element.length)];
-    document.getElementsByClassName('bubble').style.backgroundImage = random_class;*/
     return (
       <div className="hero">
         <div className="bottom-particles">

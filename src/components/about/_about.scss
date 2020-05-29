@@ -1,13 +1,10 @@
 .about {
-    color:#000b29;
-
     &-container {
+        color:#000b29;
         max-width:800px;
-        margin:0 auto;
-        padding: 20px;
-
-        @media screen and (min-width: 600px) {
-            padding: 40px;
+        margin:40px auto 0;
+        p {
+            margin:0;
         }
     }
 }
