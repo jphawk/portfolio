@@ -2,6 +2,8 @@
   position:relative;
   box-shadow: 0 8px 20px rgba(31, 30, 47, 0.12);
   border-radius:4px;
+  overflow: hidden;
+  cursor: pointer;
 
   &-container {
     img {
@@ -15,29 +17,26 @@
   &-description {
     position:absolute;
     height:100%;
+    top:100%;
     border-radius:4px;
     align-items: center;
-    cursor: pointer;
     background-color: #F5F8F2;
+    color:#000b29;
+    transition: 1s;
+    display:flex;
 
-
-    &.hide {
-      transition-timing-function: ease-out;
-      transition: 0.25s;
-      //transform: translateY(0%);
-      opacity:0;
-      bottom:30px;
-    }
-    &.show {
-      display: flex;
-      opacity:1;
-      bottom:0;
-      transition-timing-function: ease-in;
-      transition: 0.2s;
-      //transform: translateY(130%);
-    }
     p {
       padding:0 20px;
     }
+  }
+  &:hover {
+
+    .card-description {
+      transition: 1s;
+      top:0;
+    }
+  }
+  h2 {
+    color:#000b29;
   }
 }

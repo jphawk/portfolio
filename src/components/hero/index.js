@@ -9,12 +9,10 @@ function Hero(props) {
           )}
         </div>
         { props.page === "main" && 
-          <div className="hero-container">
-            <div className="hero-text">
-              <div className="background">
-                <h1>Hello, I'm Elena</h1>
-                <h2>a UX Developer based in Helsinki</h2>
-              </div>
+          <div className="hero-text">
+            <div className="background">
+              <h1>Hello, I'm Elena</h1>
+              <h2>a UX Developer based in Helsinki</h2>
             </div>
           </div>
         }
@@ -29,6 +27,13 @@ function Hero(props) {
           <div className="hero-text nomain">
             <div className="background">
               <h1>My Work</h1>
+            </div>
+          </div>
+        }
+        { props.page === "workcase" && 
+          <div className="hero-text nomain">
+            <div className="background">
+              <h1>{props.title}</h1>
             </div>
           </div>
         }

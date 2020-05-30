@@ -1,28 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Card(props) {
-  const [isHovered, setHovered] = useState(false);
-  const [resetTimer, setTimer] = useState(0);
-
-  const handleHoveredTrue = () => setHovered(true);
-
-  const handleHoveredFalse = () => {
-    clearTimeout(resetTimer);
-
-    const timer = () => setTimeout(() => {
-      setHovered(false)
-    }, 500);
-
-    setTimer(timer);
-    
-  };
-
-  const layer = isHovered ? " show" : " hide";
   const cardClass = "card " + props.title;
-  const description = "card-description" + layer;
   return (
-    <div onMouseOver={handleHoveredTrue} onMouseLeave={handleHoveredFalse} className={cardClass}>
-      <div className={description}>
+    <div className={cardClass}>
+      <div className="card-description">
         <p>{props.description}</p>
       </div>
       <div className="card-container">

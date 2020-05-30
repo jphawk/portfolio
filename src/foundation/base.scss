@@ -55,7 +55,7 @@ body {
     transform: translateZ(0);
     will-change: contents;
     position:relative;
-    height:100vh;
+    height:100%;
     overflow-x: hidden;
     @media screen and (min-width: 600px) {
         height:110vh;
@@ -169,7 +169,7 @@ a {
     display: none;
 }
 
-.page-main, .page-work, .page-about {
+.page-main, .page-work, .page-about, .page-workcase {
     background-color: #F5F8F2;
     position:relative;
     z-index:10;
@@ -193,11 +193,10 @@ a {
     @media screen and (min-width: 600px) {
       grid-template-columns: 1fr 1fr;
       column-gap: 4%;
-      grid-row-gap:20px;
+      grid-row-gap:30px;
     }
     @media screen and (min-width: 880px) {
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 3%;
-      grid-row-gap:20px;
     }
 }

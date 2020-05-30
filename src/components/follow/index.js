@@ -3,6 +3,11 @@ import React from 'react';
 function Follow(props) {
     return (
         <div id="follow" className="follow">
+            <div className="bottom-particles">
+                {[...Array(50)].map((i) =>
+                    <div className="bubble" key={i}></div>
+                )}
+            </div>
             <div className={props.page === "main" ? "follow-container width" : "follow-container"}>
                 <div className="follow-background">
                     <div className="follow-links">
