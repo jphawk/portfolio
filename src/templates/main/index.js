@@ -1,14 +1,20 @@
 import React from 'react';
 import About from '../../components/about';
 import Hero from '../../components/hero';
+import Work from '../../components/work';
+import Follow from '../../components/follow';
 
 function MainPage() {
   return (
     <div className="page">
-      <Hero />
-      <div className="page-main container">
-        <About />
+      <Hero page="main"/>
+      <div className="page-main">
+        <div className="page-main-container">
+          <Work />
+          <About />
+        </div>
       </div>
+      <Follow page="main"/>
     </div>
   );
 }

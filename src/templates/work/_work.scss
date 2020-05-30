@@ -1,0 +1,5 @@
+.page-work {
+  &-container {
+    @include grid-card;
+  }
+}

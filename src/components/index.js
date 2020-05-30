@@ -9,5 +9,6 @@ import Follow from "./follow";
 import Footer from "./footer";
 import Logo from "./logo";
 import Card from "./card";
+import Work from "./card";
 
-export { About, Card, Header, Hero, Follow, Footer, Logo };
+export { About, Card, Header, Hero, Follow, Footer, Logo, Work };

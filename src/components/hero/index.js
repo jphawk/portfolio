@@ -1,16 +1,42 @@
 import React from 'react';
-import Wave from '../../images/wavy.svg';
 
-function Hero() {
+function Hero(props) {
     return (
       <div className="hero">
-        <div className="hero-pic">
-        <img src={Wave} alt="Welcome to Elena's Portfolio <3, enjoy!" />
-        <div className="hero-pic-text">
-            <h1>Hello, I'm Elena</h1>
-            <h2>UX Developer based in Helsinki</h2>
-          </div>
+        <div className="bottom-particles">
+          {[...Array(50)].map((i) =>
+            <div className="bubble" key={i}></div>
+          )}
         </div>
+        { props.page === "main" && 
+          <div className="hero-text">
+            <div className="background">
+              <h1>Hello, I'm Elena</h1>
+              <h2>a UX Developer based in Helsinki</h2>
+            </div>
+          </div>
+        }
+        { props.page === "about" && 
+          <div className="hero-text nomain">
+            <div className="background">
+              <h1>About Me</h1>
+            </div>
+          </div>
+        }
+        { props.page === "work" && 
+          <div className="hero-text nomain">
+            <div className="background">
+              <h1>My Work</h1>
+            </div>
+          </div>
+        }
+        { props.page === "workcase" && 
+          <div className="hero-text nomain">
+            <div className="background">
+              <h1>{props.title}</h1>
+            </div>
+          </div>
+        }
       </div>
     );
   }

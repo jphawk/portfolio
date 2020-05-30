@@ -1,24 +1,10 @@
 .about {
-    margin-bottom:60px;
-    background-color: white;
-    color:#000b29;
-    margin:0 -40px;
-    padding: 40px;
-
-    @media screen and (min-width: 600px) {
-        display:flex;
-    }
-
-    .about-pic {
-        img {
-            width:100%;
-            @media screen and (min-width: 600px) {
-                width:auto;
-                max-width:350px;
-            }
-        }
-        @media screen and (min-width: 600px) {
-            margin-right: 10%;
+    &-container {
+        color:#000b29;
+        max-width:800px;
+        margin:40px auto 0;
+        p {
+            margin:0;
         }
     }
 }

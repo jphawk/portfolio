@@ -1,9 +1,15 @@
 .navbar-menu {
-    padding: 20px 0;
+    padding: 20px;
     display:flex;
     justify-content: flex-end;
+
+    @media screen and (min-width: 600px) {
+        padding: 20px 40px;
+    }
+
     &-item {
         margin-right:20px;
+        color:#000b29;
         &.home.active {
             display:none;
         }
