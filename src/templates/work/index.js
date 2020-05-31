@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { cases } from '../../content';
 
 function Work(props) {
-
   return (
     <>
       <Hero page="work"/>
@@ -15,8 +14,8 @@ function Work(props) {
           <div className="page-work-container">
           {
             cases.map(workcase => (
-              <Link to={"works/" + workcase.title} title={workcase.title}>
-                <Card key={workcase.title} title={workcase.title} heading={workcase.heading} img={workcase.img} description={workcase.description} {...props}/>
+              <Link to={"works/" + workcase.title} title={workcase.title} key={workcase.title}>
+                <Card started={props.started} key={workcase.title} title={workcase.title} heading={workcase.heading} img={workcase.img} description={workcase.description} {...props}/>
               </Link>
             )
           )}

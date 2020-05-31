@@ -18,6 +18,7 @@ $violet: #A11040;
 $yellow:#D9A116;
 $tran-speed: 120s;
 
+/*
 @keyframes changeBg{
     0%{
         background: $blue;
@@ -34,7 +35,7 @@ $tran-speed: 120s;
     80%{
         background: $lightblue;
     } 
-}
+}*/
 
 // Particle setting
 $count: 25;
@@ -48,10 +49,10 @@ $min-speed: 6000;  // ms
 $max-speed: 18000; // ms
 $max-delay: 12000; // ms   
 
-body {
-    background-color: $blue;
+main {
+    /*background-color: $blue;
     animation: changeBg 120s alternate;
-    animation-iteration-count:infinite;
+    animation-iteration-count:infinite;*/
     transform: translateZ(0);
     will-change: contents;
     position:relative;
@@ -147,6 +148,13 @@ h1 {
 }
 
 h2{
+    font-size: 1.5rem;
+    @media screen and (min-width: 600px) {
+        font-size: 2rem;
+    }
+}
+
+h3{
     font-size: 1.25rem;
     @media screen and (min-width: 600px) {
         font-size: 1.5rem;
