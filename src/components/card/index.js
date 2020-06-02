@@ -1,27 +1,25 @@
 import React, { useEffect } from 'react';
-import { motion, useAnimation } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 
 function Card(props) {
   const cardClass = "card card-" + props.title;
-  const controls = useAnimation();
+  const elapsedTime = useMotionValue(0);
+  const time = props.animation;
 
-  console.log(props.started);
-  useEffect(() => {
-    props.started && 
-    controls.start({
-      backgroundColor: ["#000B29", "#095C11", "#D9A116", "#A11040", "#10359C", "#000B29"],
-      transition: {
-        duration: 120,
-        loop: Infinity
-      }
-    }
-    )
-  });
+  useEffect(() => time.onChange(elapsedTime => elapsedTime.set(time))); 
+  //console.log(props.animation);
 
   return (
     <div className={cardClass}>
       <motion.div className="card-description" 
-        animate={controls}
+        animate={{
+          backgroundColor: ["#000B29", "#095C11", "#D9A116", "#A11040", "#10359C", "#000B29"]
+        }}
+        transition={{
+          duration: 120,
+          loop: Infinity
+        }}
+        style={{ elapsedTime }}
       >
         <p>{props.description}</p>
       </motion.div>

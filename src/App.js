@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import MainPage from './templates/main';
 import Work from './templates/work';
 import WorkCase from './templates/works';
@@ -6,13 +6,13 @@ import AboutMe from './templates/aboutme';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/header';
 import { motion } from "framer-motion";
+import { useElapsedTime } from "use-elapsed-time";
 
 function App() {
-  const [isStarted, setStarted] = useState(false);
-
-  useEffect(() => {
-    setStarted(true);
-  }, []);
+  const isPlaying = true;
+  const duration = 120;
+  const options = { duration };
+  const { elapsedTime } = useElapsedTime(isPlaying, options);
 
   return (
     <div className="content-wrapper">
@@ -25,11 +25,10 @@ function App() {
             duration: 120,
             loop: Infinity
           }}
-          layoutId="bg"
         >
           <Switch>
-            <Route path="/" exact render={() => <MainPage started={isStarted} />}/>
-            <Route path="/work" render={() => <Work started={isStarted} />} />
+            <Route path="/" exact render={() => <MainPage animation={elapsedTime} />}/>
+            <Route path="/work" render={() => <Work animation={elapsedTime}/>} />
             <Route path="/works/:userId" component={WorkCase} />
             <Route path="/about" component={AboutMe} />
           </Switch>
