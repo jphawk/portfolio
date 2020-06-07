@@ -10,20 +10,22 @@
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
     }
-    h2 {
+    h3 {
       padding:0 20px;
     }
   }
   &-description {
+    display:flex;
     position:absolute;
     height:100%;
     top:100%;
     border-radius:4px;
     align-items: center;
-    background-color: #F5F8F2;
-    color:#000b29;
+    background-color: $blue;
+    color:#F5F8F2;
     transition: 1s;
-    display:flex;
+    transform: translateZ(0);
+    will-change: contents;
 
     p {
       padding:0 20px;
@@ -36,7 +38,7 @@
       top:0;
     }
   }
-  h2 {
+  h3 {
     color:#000b29;
   }
 }

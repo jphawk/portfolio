@@ -2,7 +2,7 @@ import React from 'react';
 
 function Follow(props) {
     return (
-        <div id="follow" className="follow">
+        <div id="follow" className="follow animation">
             <div className="bottom-particles">
                 {[...Array(50)].map((i) =>
                     <div className="bubble" key={i}></div>

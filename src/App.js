@@ -5,19 +5,24 @@ import WorkCase from './templates/works';
 import AboutMe from './templates/aboutme';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/header';
+import { randomColor } from './foundation';
+
 
 function App() {
+  const colors = ['#000B29', '#095C11', '#D9A116', '#A11040', '#10359C', '#531C70'];
+  const newColor = randomColor(colors);
+
   return (
     <div className="content-wrapper">
       <Header />
-      <main>
-        <Switch>
-          <Route path="/" component={MainPage} exact />
-          <Route path="/work" component={Work} />
-          <Route path="/works/:userId" component={WorkCase} />
-          <Route path="/about" component={AboutMe} />
-        </Switch>
-      </main>
+        <div className="anim" style={{backgroundColor: newColor}}>
+          <Switch>
+            <Route path="/" exact render={() => <MainPage bgcolor={newColor} />}/>
+            <Route path="/work" render={() => <Work bgcolor={newColor} />} />
+            <Route path="/works/:userId" component={WorkCase} />
+            <Route path="/about" component={AboutMe} />
+          </Switch>
+        </div>
     </div>
     
   );
