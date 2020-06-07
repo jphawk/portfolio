@@ -10,7 +10,7 @@ function MainPage(props) {
       <Hero page="main"/>
       <div className="page-main">
         <div className="page-main-container">
-          <Work animation={props.animation}/>
+          <Work bgcolor={props.bgcolor}/>
           <About />
         </div>
       </div>

@@ -15,7 +15,7 @@ function Work(props) {
           {
             cases.map(workcase => (
               <Link to={"works/" + workcase.title} title={workcase.title} key={workcase.title}>
-                <Card animation={props.animation} key={workcase.title} title={workcase.title} heading={workcase.heading} img={workcase.img} description={workcase.description} {...props}/>
+                <Card key={workcase.title} bgcolor={props.bgcolor} title={workcase.title} heading={workcase.heading} img={workcase.img} description={workcase.description} {...props}/>
               </Link>
             )
           )}
