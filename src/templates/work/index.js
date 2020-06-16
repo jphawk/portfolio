@@ -3,9 +3,10 @@ import Hero from '../../components/hero';
 import Card from '../../components/card';
 import Follow from '../../components/follow';
 import { Link } from 'react-router-dom';
-import { cases } from '../../content';
 
-function Work(props) {
+const Work = (props) => {
+  const { bgcolor, workcases } = props;
+
   return (
     <>
       <Hero page="work"/>
@@ -13,9 +14,9 @@ function Work(props) {
         <div className="page-work">
           <div className="page-work-container">
           {
-            cases.map(workcase => (
-              <Link to={"works/" + workcase.title} title={workcase.title} key={workcase.title}>
-                <Card key={workcase.title} bgcolor={props.bgcolor} title={workcase.title} heading={workcase.heading} img={workcase.img} description={workcase.description} {...props}/>
+            workcases.map(workcase => (
+              <Link to={`/works/${workcase.slug}`} title={workcase.workcaseTitle} key={workcase.workcaseTitle}>
+                <Card key={workcase.workcaseTitle} bgcolor={bgcolor} title={workcase.workcaseTitle} heading={workcase.workcaseTitle} img={workcase.image.url} description={workcase.workcaseDescription} />
               </Link>
             )
           )}

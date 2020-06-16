@@ -1,24 +1,23 @@
 import React from 'react';
 import Hero from '../../components/hero';
 import Follow from '../../components/follow';
-import { cases } from '../../content';
-import { workSlug } from '../../foundation';
+import { useParams } from 'react-router-dom';
 
-function WorkCase() {
-  console.log(workSlug());
+function WorkCase(props) {
+  const { slug } = useParams();
   return (
     <div className="page">
-      {cases.filter(workcase => workcase.title === workSlug()).map(filteredCase => (
-        <>
-          <Hero page="workcase" title={filteredCase.heading} />
-          <div className="page-workcase">
-            <div className="page-workcase-container">
-              <p>{filteredCase.description}</p>
-            </div>
+      {props.workcases.filter(workcase => workcase.slug === slug).map(filteredCase => (
+      <>
+        <Hero page="workcase" title={filteredCase.workcaseTitle} />
+        <div className="page-workcase">
+          <div className="page-workcase-container">
+            {filteredCase.workcaseContentHtml}
           </div>
-          <Follow />
-        </>
-      ))}
+        </div>
+        <Follow />
+      </>
+       ))}
     </div>
   );
 }

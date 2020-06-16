@@ -1,19 +1,18 @@
 import React from 'react';
 import Card from '../../components/card';
 import { Link } from 'react-router-dom';
-import { cases } from '../../content';
 
 function Work(props) {
-
+  const { bgcolor, workcases } = props;
   return (
     <>
       <h2>My Recent Projects</h2>
       <div className="work-block">
         {
-          cases.slice(0,3).map(workcase => (
-            <Link to={"works/" + workcase.title} title={workcase.title} key={workcase.title}>
-              <Card title={workcase.title} bgcolor={props.bgcolor} key={workcase.title} heading={workcase.heading} img={workcase.img} description={workcase.description}/>
-            </Link>
+          workcases.slice(0,3).map(workcase => (
+          <Link to={`/works/${workcase.slug}`} title={workcase.workcaseTitle} key={workcase.workcaseTitle}>
+            <Card key={workcase.workcaseTitle} bgcolor={bgcolor} title={workcase.workcaseTitle} heading={workcase.workcaseTitle} img={workcase.image.url} description={workcase.workcaseDescription}/>
+          </Link>
           )
         )}
       </div>
