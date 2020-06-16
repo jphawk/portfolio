@@ -4,8 +4,8 @@ function Hero(props) {
     return (
       <div className="hero">
         <div className="bottom-particles">
-          {[...Array(50)].map((i) =>
-            <div className="bubble" key={i}></div>
+          {[...Array(50)].map((item, key) =>
+            <div className="bubble" key={key}></div>
           )}
         </div>
         { props.page === "main" && 
