@@ -12,7 +12,7 @@ function Hero(props) {
           <div className="hero-text">
             <div className="background">
               <h1>Hello, I'm Elena</h1>
-              <h2>a UX Developer based in Helsinki</h2>
+              <h2>a UX Developer based in Helsinki :3</h2>
             </div>
           </div>
         }
