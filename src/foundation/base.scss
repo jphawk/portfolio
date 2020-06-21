@@ -6,16 +6,115 @@ table {
     line-height: 1.5rem;
     margin:0;
     color:#000b29;
+    text-align:center;
 }
 
 /* Animation */
 
 $white: #fff;
-$lightblue: #10359C;
-$green: #095C11;
-$blue: #000B29;
-$violet: #A11040;
-$yellow:#D9A116;
+.lightblue {
+    .carousel-prev {
+        &:before {
+            border-right: solid 8px #10359C!important;
+        } 
+    }
+    .carousel-next {
+        &:before {
+            border-left: solid 8px #10359C!important;
+        } 
+    }
+    button {
+        &:before {
+            color:#10359C!important;
+        }
+    }  
+}
+.green {
+    .carousel-prev {
+        &:before {
+            border-right: solid 8px #095C11!important;
+        }
+    }
+    .carousel-next {
+        &:before {
+            border-left: solid 8px #095C11!important;
+        }
+    }
+    button {
+        &:before {
+            color:#095C11!important;
+        }
+    }  
+}
+.blue {
+    .carousel-prev {
+        &:before {
+            border-right: solid 8px #000B29!important;
+        }
+    }
+    .carousel-next {
+        &:before {
+            border-left: solid 8px #000B29!important;
+        }
+    }
+    button {
+        &:before {
+            color:#000B29!important;
+        }
+    }  
+}
+.red {
+    .carousel-prev {
+        &:before {
+            border-right: solid 8px #A11040!important;
+        }
+    }
+    .carousel-next {
+        &:before {
+            border-left: solid 8px #A11040!important;
+        } 
+    }
+    button {
+        &:before {
+            color:#A11040!important;
+        }
+    }
+}
+.yellow {
+    .carousel-prev {
+        &:before {
+            border-right: solid 8px #D9A116!important;
+        } 
+    }
+    .carousel-next {
+        &:before {
+            border-left: solid 8px#D9A116!important;
+        } 
+    }
+    button {
+        &:before {
+            color:#D9A116!important;
+        }
+    }
+}
+.purple {
+    .carousel-prev {
+        &:before {
+            border-right: solid 8px #531C70!important;
+        } 
+    }
+    .carousel-next {
+        &:before {
+            border-left:solid 8px #531C70!important;
+        }
+    }
+    button {
+        &:before {
+            color:#531C70!important;
+        }
+    }
+}
+
 $tran-speed: 120s;
 
 // Particle setting
@@ -31,9 +130,6 @@ $max-speed: 18000; // ms
 $max-delay: 12000; // ms   
 
 main {
-    /*background-color: $blue;
-    animation: changeBg 120s alternate;
-    animation-iteration-count:infinite;*/
     transform: translateZ(0);
     will-change: contents;
     position:relative;
@@ -136,10 +232,9 @@ h2{
 }
 
 h3{
-    font-size: 1.25rem;
-    @media screen and (min-width: 600px) {
-        font-size: 1.5rem;
-    }
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.75rem;
 }
 
 a {
@@ -167,15 +262,18 @@ a {
     position:relative;
     z-index:10;
 
-    &-container {
+    &-container, .container {
         max-width:1040px;
         margin:0 auto;
         padding: 40px 20px;
     
         @media screen and (min-width: 600px) {
-            padding: 40px;
+            padding: 80px 40px;
         }
       }
+    .feedback-container.container {
+        padding-top: 30px;
+    }
 }
 
 @mixin grid-card {

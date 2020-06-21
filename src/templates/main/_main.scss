@@ -1,0 +1,8 @@
+.page-main {
+  h2 {
+    margin: 0 0 30px;
+    @media screen and (min-width: 600px) {
+      margin: 0 0 50px;
+    }
+  }
+}

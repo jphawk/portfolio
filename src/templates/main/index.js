@@ -1,8 +1,8 @@
 import React from 'react';
-import About from '../../components/about';
 import Hero from '../../components/hero';
 import Work from '../../components/work';
 import Follow from '../../components/follow';
+import Feedback from '../../components/feedback';
 
 function MainPage(props) {
   return (
@@ -11,8 +11,8 @@ function MainPage(props) {
       <div className="page-main">
         <div className="page-main-container">
           <Work workcases={props.workcases} bgcolor={props.bgcolor}/>
-          <About />
         </div>
+        <Feedback feedback={props.feedback} bgcolor={props.bgcolor} />
       </div>
       <Follow page="main"/>
     </div>
