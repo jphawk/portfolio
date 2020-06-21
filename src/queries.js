@@ -10,5 +10,12 @@ export const cases = `
         url
       }
     }
+    feedbacks {
+      recommendation
+      author
+      title
+      company
+      linkedin
+    }
   }
 `;

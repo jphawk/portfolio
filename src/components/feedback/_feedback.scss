@@ -1,0 +1,66 @@
+.feedback-container {
+  &-rec {
+    margin-top:0;
+  }
+  &-info {
+    margin-bottom:0;
+    a {
+      font-weight:600;
+    }
+  }
+
+  h2 {
+    margin: 0 0 30px;
+    @media screen and (min-width: 600px) {
+      margin: 0 0 50px;
+    }
+  }
+
+  .slider {
+    padding: 0;
+  }
+  .carousel {
+    &-track {
+      
+      @media screen and (min-width: 600px) {
+        height:210px!important;
+      }
+      @media screen and (min-width: 900px) {
+        height:150px!important;
+      }
+    }
+    &-dots {
+      margin-bottom:0;
+    }
+    &-row {
+      width:75%;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    &-next, &-prev {
+      border:none;
+      background:none;
+      border-radius: 0;
+      &:before {
+        width: 30px;
+        height: 2px;
+        background-image:none;
+      }
+    }
+    &-prev {
+      &:before {
+        border-bottom: solid 8px transparent;
+        border-top: solid 8px transparent;
+        border-left:none;
+      }
+    }
+    &-next {
+      &:before {
+        border-bottom: solid 8px transparent;
+        border-top: solid 8px transparent;
+        border-right:none;
+      }
+    }
+  }
+
+}

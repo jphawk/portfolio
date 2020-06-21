@@ -6,7 +6,7 @@ function Work(props) {
   const { bgcolor, workcases } = props;
   return (
     <>
-      <h2>My Recent Projects</h2>
+      <h2 style={{color:bgcolor}}>My Recent Projects</h2>
       <div className="work-block">
         {
           workcases.slice(0,3).map(workcase => (

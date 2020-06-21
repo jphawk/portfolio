@@ -16,30 +16,32 @@ function App() {
   const newColor = randomColor(colors);
 
   const [workcases, setWorkcases] = useState(null);
+  const [feedbacks, setFeedback] = useState(null);
 
   useEffect(() => {
-    const fetchWorkcases = async () => {
-      const { workcases } = await request(
+    const fetchData = async () => {
+      const { workcases, feedbacks } = await request(
         GRAPHCMS_API,
         cases
       );
 
       setWorkcases(workcases);
+      setFeedback(feedbacks);
     };
 
-    fetchWorkcases();
+    fetchData();
   }, []);
 
   return (
       <div className="content-wrapper">
         <Header />
           <div className="anim" style={{backgroundColor: newColor}}>
-            {!workcases ? ('Loading') :
+            {!(workcases && feedbacks)? ('Loading') :
               <Switch>
-                <Route path="/" exact render={() => <MainPage workcases={workcases} bgcolor={newColor} />}/>
+                <Route path="/" exact render={() => <MainPage workcases={workcases} feedback={feedbacks} bgcolor={newColor} />}/>
                 <Route path="/work" render={() => <Work workcases={workcases} bgcolor={newColor} />} />
                 <Route path="/works/:slug" render={() => <WorkCase workcases={workcases} />} />
-                <Route path="/about" component={AboutMe} />
+                <Route path="/about" render={() => <AboutMe feedback={feedbacks} bgcolor={newColor} />} />
               </Switch>
             }
           </div>

@@ -10,8 +10,11 @@ function Card(props) {
         <p>{props.description}</p>
       </div>
       <div className="card-container">
-        <img src={props.img} alt={props.title} />
-        <h3>{props.heading}</h3>
+        <div className="card-container-img" style={{backgroundImage: `url(${props.img})`}}>
+        </div>
+        <div className="card-container-wrap">
+          <h3>{props.heading}</h3>
+        </div>
       </div>
     </div>
   );
