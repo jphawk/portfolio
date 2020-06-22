@@ -7,7 +7,7 @@ function Feedback(props) {
   const bg = () => {
     switch(bgcolor) {
       case "#10359C":
-        return 'light-blue';
+        return 'lightblue';
       case "#095C11":
         return 'green';
       case "#000B29":
