@@ -1,0 +1,100 @@
+.divider {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 30px 0 80px;
+
+  .flex {
+    width: 350px;
+    height:100px;
+    position:relative;
+  }
+
+  .circle {
+    border-radius: 50%;
+    position:absolute;
+  
+    &.small {
+      width: 20px;
+      height: 20px;
+    }
+    
+    &.medium {
+      width: 40px;
+      height: 40px;
+    }
+    
+    &.big{
+      width: 50px;
+      height: 50px;
+    }
+    
+    &.one {
+      left:0;
+      bottom:0;
+      animation: moveit 4s infinite;
+      opacity:0.6;
+    }
+    
+    &.two {
+      left:30px;
+      bottom:30px;
+      animation: moveit-sec 5s infinite;
+      opacity:0.4;
+    }
+    
+    &.three {
+      left:95px;
+      top:0;
+      animation: moveit-three 4s infinite;
+      opacity:0.45;
+    }
+    
+    &.four {
+      left:170px;
+      bottom:30px;
+      animation: moveit-sec 5s infinite;
+      opacity:0.6;
+    }
+    
+    &.five {
+      left:220px;
+      bottom:0;
+      animation: moveit 4s infinite;
+      opacity:0.5;
+    }
+    
+    &.six {
+      left:300px;
+      bottom:30px;
+      animation: moveit-sec 5s infinite;
+      opacity:0.45;
+    }
+    
+    &.seven {
+      left:350px;
+      top:0;
+      animation: moveit-three 4s infinite;
+      opacity:0.6;
+    }
+    
+  }
+  
+  @keyframes moveit {
+    0%   { bottom: 0;}
+    50%   { bottom: 10px;}
+    100% { bottom: 0;}
+  }
+  
+  @keyframes moveit-sec {
+    0%   { bottom: 30px;}
+    50% { bottom: 40px;}
+    100% { bottom: 30px;}
+  }
+  
+  @keyframes moveit-three {
+    0%   { top: 0;}
+    50% { top: 10px;}
+    100% { top: 0;}
+  }
+}
