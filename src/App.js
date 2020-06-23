@@ -35,16 +35,16 @@ function App() {
   return (
       <div className="content-wrapper">
         <Header />
-          <div className="anim" style={{backgroundColor: newColor}}>
-            {!(workcases && feedbacks)? ('Loading') :
+          {!(workcases && feedbacks)? ('') :
+            <div className="anim" style={{backgroundColor: newColor}}>
               <Switch>
                 <Route path="/" exact render={() => <MainPage workcases={workcases} feedback={feedbacks} bgcolor={newColor} />}/>
                 <Route path="/work" render={() => <Work workcases={workcases} bgcolor={newColor} />} />
                 <Route path="/works/:slug" render={() => <WorkCase workcases={workcases} />} />
                 <Route path="/about" render={() => <AboutMe feedback={feedbacks} bgcolor={newColor} />} />
               </Switch>
-            }
-          </div>
+            </div>
+          }
       </div>
   );
 }
