@@ -14,9 +14,28 @@ const Work = (props) => {
         <div className="page-work">
           <div className="page-work-container">
           {
-            workcases.map(workcase => (
-              <Link to={`/works/${workcase.slug}`} title={workcase.workcaseTitle} key={workcase.workcaseTitle}>
-                <Card key={workcase.workcaseTitle} bgcolor={bgcolor} title={workcase.workcaseTitle} heading={workcase.workcaseTitle} img={workcase.image.url} description={workcase.workcaseDescription} />
+            workcases.map((workcase, i, arr) => (
+              <Link className="card-link" to={`/works/${workcase.slug}`} title={workcase.workcaseTitle} key={workcase.workcaseTitle}>
+                { i !== (arr.length-1) ?
+                  <Card
+                    key={workcase.slug}
+                    divName={workcase.slug} 
+                    bgcolor={bgcolor} 
+                    title={workcase.workcaseTitle} 
+                    heading={workcase.workcaseTitle} 
+                    img={workcase.image.url} 
+                    description={workcase.workcaseDescription} 
+                  />
+                :
+                <div className="card card-last" style={{backgroundColor: bgcolor}}>
+                  <h2 className="card-last-container">{workcase.workcaseTitle}</h2>
+                  <div className="bottom-particles">
+                    {[...Array(15)].map((i, key) =>
+                      <div className="bubble" key={key}></div>
+                    )}
+                  </div>
+                </div>
+                }
               </Link>
             )
           )}

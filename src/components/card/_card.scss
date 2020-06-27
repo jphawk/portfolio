@@ -5,6 +5,7 @@
   overflow: hidden;
   cursor: pointer;
   text-align: left;
+  min-height: 100%;
 
   &-container {
     &-img {
@@ -36,6 +37,32 @@
   &-description {
     display:none;
   }
+
+  &-last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 320px;
+
+    @media screen and (min-width: 600px) {
+      min-height: 100%;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 3rem;
+    }
+  }
+
+  &-link {
+    &:last-child {
+      &:hover {
+        text-decoration:none;
+      }
+    }
+  }
+
   @media screen and (min-width: 600px) {
     &-description {
       display:flex;
@@ -55,7 +82,6 @@
       }
     }
     &:hover {
-
       .card-description {
         transition: 1s;
         top:0;

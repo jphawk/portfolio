@@ -11,7 +11,15 @@ function Work(props) {
         {
           workcases.slice(0,3).map(workcase => (
           <Link to={`/works/${workcase.slug}`} title={workcase.workcaseTitle} key={workcase.workcaseTitle}>
-            <Card key={workcase.workcaseTitle} bgcolor={bgcolor} title={workcase.workcaseTitle} heading={workcase.workcaseTitle} img={workcase.image.url} description={workcase.workcaseDescription}/>
+            <Card
+              key={workcase.slug}
+              divName={workcase.slug} 
+              bgcolor={bgcolor} 
+              title={workcase.workcaseTitle} 
+              heading={workcase.workcaseTitle} 
+              img={workcase.image.url} 
+              description={workcase.workcaseDescription} 
+            />
           </Link>
           )
         )}

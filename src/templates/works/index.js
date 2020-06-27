@@ -12,11 +12,10 @@ function WorkCase(props) {
       <>
         <Hero page="workcase" title={filteredCase.workcaseTitle} />
         <div className="page-workcase">
-          <a style={{color: props.bgcolor}} href={filteredCase.mediumLink} title="Read about this in Medium">Read about this in Medium</a>
+          {filteredCase.mediumLink && <a style={{color: props.bgcolor}} href={filteredCase.mediumLink} title="Read about this in Medium">Read about this in Medium</a>}
           <div className="page-workcase-container">
             <ReactMarkdown source={filteredCase.workcaseContentHtml && filteredCase.workcaseContentHtml.toString()} escapeHtml={false} />
           </div>
-          
         </div>
         <Follow />
       </>

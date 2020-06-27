@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card(props) {
 
-  const cardClass = "card card-" + props.title;
+  const cardClass = "card card-" + props.divName;
 
   return (
     <div className={cardClass}>
