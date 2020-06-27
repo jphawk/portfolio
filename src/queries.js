@@ -4,17 +4,19 @@ export const cases = `
       id
       slug
       workcaseTitle
-      workcaseContentHtml
       workcaseDescription
+      workcaseContentHtml
       image {
         url
       }
+      mediumLink
     }
     feedbacks {
       recommendation
       author
       title
       company
+      companyLink
       linkedin
     }
   }

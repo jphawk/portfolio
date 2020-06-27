@@ -29,7 +29,13 @@ function Feedback(props) {
           feedback.map(myfeedback => (
             <>
               <p className="feedback-container-rec">{myfeedback.recommendation}</p>
-              <p className="feedback-container-info"><a className="feedback-container-author" href={myfeedback.linkedin} title={myfeedback.author} style={{color:bgcolor}}><span>{myfeedback.author}</span></a>, {myfeedback.title} from {myfeedback.company}</p>
+              <p className="feedback-container-info">
+                <a className="feedback-container-author" href={myfeedback.linkedin} title={myfeedback.author} style={{color:bgcolor}}>
+                  <span>{myfeedback.author}</span>
+                </a>, {myfeedback.title} at <a className="feedback-container-author" href={myfeedback.companyLink} title={myfeedback.company} style={{color:bgcolor}}>
+                  <span>{myfeedback.company}</span>
+                </a> 
+              </p>
             </>
           )
         )
