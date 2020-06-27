@@ -40,7 +40,7 @@ function App() {
               <Switch>
                 <Route path="/" exact render={() => <MainPage workcases={workcases} feedback={feedbacks} bgcolor={newColor} />}/>
                 <Route path="/work" render={() => <Work workcases={workcases} bgcolor={newColor} />} />
-                <Route path="/works/:slug" render={() => <WorkCase workcases={workcases} />} />
+                <Route path="/works/:slug" render={() => <WorkCase workcases={workcases} bgcolor={newColor} />} />
                 <Route path="/about" render={() => <AboutMe feedback={feedbacks} bgcolor={newColor} />} />
               </Switch>
             </div>
