@@ -10,9 +10,20 @@ function WorkCase(props) {
     <div className="page">
       {props.workcases.filter(workcase => workcase.slug === slug).map(filteredCase => (
       <>
-        <Hero page="workcase" title={filteredCase.workcaseTitle} />
+        <div className="page-workcase-hero">
+          <Hero page="workcase" title={filteredCase.workcaseTitle} />
+          {filteredCase.mediumLink && 
+            <a 
+              href={filteredCase.mediumLink} 
+              title="Read about this in Medium"
+              className="medium-link">
+                <div className="medium-link-container">
+                  <p>Read about this
+                  <span>on Medium</span></p>
+                </div>
+            </a>}
+        </div>
         <div className="page-workcase">
-          {filteredCase.mediumLink && <a style={{color: props.bgcolor}} href={filteredCase.mediumLink} title="Read about this in Medium">Read about this in Medium</a>}
           <div className="page-workcase-container">
             <ReactMarkdown source={filteredCase.workcaseContentHtml && filteredCase.workcaseContentHtml.toString()} escapeHtml={false} />
           </div>

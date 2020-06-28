@@ -1,3 +1,14 @@
 .work-block {
   @include grid-card;
+
+  &-checkmore {
+    margin-top:3rem;
+    display:block;
+    text-decoration:underline;
+    h3 {
+      font-weight:600;
+      margin:0;
+    }
+  }
 }
+

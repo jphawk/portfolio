@@ -14,6 +14,7 @@ function Follow(props) {
                         <h2>{'Follow me on Social Media ♡'}</h2>
                         <a href="https://www.linkedin.com/in/elena-kazakova-uxdev" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                         <a href="https://www.instagram.com/elena.hawk" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="mailto:eo_kazakova@yahoo.com" title="Email" target="_blank" rel="noopener noreferrer">or <b>Email Me</b></a>
                     </div>  
                 </div>
             </div>

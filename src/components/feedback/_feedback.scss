@@ -21,7 +21,7 @@
   }
   .carousel {
     &-track {
-      
+      height:330px!important;
       @media screen and (min-width: 600px) {
         height:210px!important;
       }

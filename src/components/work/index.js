@@ -24,6 +24,7 @@ function Work(props) {
           )
         )}
       </div>
+      <Link to={`/work`} style={{color:bgcolor}} title="Check out more" className="work-block-checkmore"><h3>Check out more!</h3></Link>
     </>
   );
 };
