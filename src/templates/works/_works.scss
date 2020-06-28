@@ -23,8 +23,15 @@
   justify-content: center;
 
   &-container {
-    opacity:1;
     text-align: center;
+    width:160px;
+    height:160px;
+    padding:15px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.2);
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
 
   p {
