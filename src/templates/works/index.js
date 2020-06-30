@@ -21,6 +21,7 @@ function WorkCase(props) {
                   <span>on Medium</span></p>
                 </div>
             </a>}
+            <div className="page-workcase-arrow"></div>
             <Hero page="workcase" title={filteredCase.workcaseTitle} />
         </div>
         <div className="page-workcase">
