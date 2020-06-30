@@ -17,8 +17,11 @@
             text-align: center;
             color:#F5F8F2;
             width:100%;
-            h1 {
-                margin:0;
+            @media screen and (min-width: 760px) {
+                h1 {
+                    margin:0 auto;
+                    max-width: 60%;
+                }
             }
             h2 {
                 margin-bottom:0;

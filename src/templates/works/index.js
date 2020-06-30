@@ -11,7 +11,6 @@ function WorkCase(props) {
       {props.workcases.filter(workcase => workcase.slug === slug).map(filteredCase => (
       <>
         <div className="page-workcase-hero">
-          <Hero page="workcase" title={filteredCase.workcaseTitle} />
           {filteredCase.mediumLink && 
             <a 
               href={filteredCase.mediumLink} 
@@ -22,6 +21,7 @@ function WorkCase(props) {
                   <span>on Medium</span></p>
                 </div>
             </a>}
+            <Hero page="workcase" title={filteredCase.workcaseTitle} />
         </div>
         <div className="page-workcase">
           <div className="page-workcase-container">
