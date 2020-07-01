@@ -6,6 +6,7 @@ export const cases = `
       workcaseTitle
       workcaseDescription
       workcaseContentHtml
+      gallery
       image {
         url
       }
@@ -18,6 +19,18 @@ export const cases = `
       company
       companyLink
       linkedin
+    }
+    galleryMiscs {
+      name
+      description
+      image {
+        url
+      }
+      width
+      height
+      thumbnail {
+        url
+      }
     }
   }
 `;

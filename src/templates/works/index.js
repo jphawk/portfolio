@@ -1,15 +1,25 @@
 import React from 'react';
 import Hero from '../../components/hero';
 import Follow from '../../components/follow';
+import Gallery from 'react-grid-gallery';
 import { useParams } from 'react-router-dom';
 
 function WorkCase(props) {
   const { slug } = useParams();
+  const imagesQuery = props.misc.map((entity) => (
+      {
+        src: entity.image.url,
+        thumbnail:entity.thumbnail.url,
+        caption: entity.name,
+        thumbnailWidth: entity.width,
+        thumbnailHeight: entity.height
+      }
+  ));
   const ReactMarkdown = require('react-markdown/with-html');
   return (
     <div className="page">
       {props.workcases.filter(workcase => workcase.slug === slug).map(filteredCase => (
-      <>
+      <div className={filteredCase.slug}>
         <div className="page-workcase-hero">
           {filteredCase.mediumLink && 
             <React.Fragment>
@@ -29,10 +39,15 @@ function WorkCase(props) {
         <div className="page-workcase">
           <div className="page-workcase-container">
             <ReactMarkdown source={filteredCase.workcaseContentHtml && filteredCase.workcaseContentHtml.toString()} escapeHtml={false} />
+            {filteredCase.gallery && 
+              <div className="gallery-container">
+                <Gallery images={imagesQuery} enableImageSelection={false} />
+              </div>
+            }
           </div>
         </div>
         <Follow />
-      </>
+      </div>
        ))}
     </div>
   );
