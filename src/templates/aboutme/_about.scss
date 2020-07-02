@@ -1,4 +1,9 @@
 .page-about {
   color:#000b29;
   background-color: #F5F8F2;
+  .medium-articles {
+    .container {
+      @include grid-card;
+    }
+  }
 }

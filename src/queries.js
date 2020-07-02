@@ -32,5 +32,14 @@ export const cases = `
         url
       }
     }
+    mediumArticles {
+      name
+      description
+      mediumLink
+      slug
+      image {
+        url
+      }
+    }
   }
 `;
