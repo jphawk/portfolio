@@ -7,6 +7,7 @@ export const cases = `
       workcaseDescription
       workcaseContentHtml
       gallery
+      updatedAt
       image {
         url
       }

@@ -6,7 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Work = (props) => {
   const { bgcolor, workcases } = props;
-
+  const workcaseFiltered = workcases.sort(function(a, b) {
+    a = new Date(a.updatedAt);
+    b = new Date(b.updatedAt);
+    return a>b ? -1 : a<b ? 1 : 0;
+});
   return (
     <>
       <Hero page="work"/>
@@ -14,7 +18,7 @@ const Work = (props) => {
         <div className="page-work">
           <div className="page-work-container">
           {
-            workcases.map((workcase, i, arr) => (
+            workcaseFiltered.map((workcase, i, arr) => (
               <Link className="card-link" to={`/works/${workcase.slug}`} title={workcase.workcaseTitle} key={workcase.workcaseTitle}>
                 { i !== (arr.length-1) ?
                   <Card
