@@ -2,8 +2,15 @@
   color:#000b29;
   background-color: #F5F8F2;
   .medium-articles {
+    h2 {
+      margin: 3rem 0 0;
+    }
     .container {
+      padding-top:20px;
       @include grid-card;
+      @media screen and (min-width: 600px) {
+        padding-top:50px;
+      }
     }
   }
 }
