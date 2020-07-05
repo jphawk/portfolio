@@ -1,6 +1,14 @@
 //Fonts
 @import url('https://fonts.googleapis.com/css?family=Lato:400,500,600&&display=swap');
-@import url(//db.onlinewebfonts.com/c/a61ec69bbdf5f1b90bd4fde89da427b9?family=Verveine);
+
+@font-face {
+  font-family: "Verveine"; 
+  src: url("https://db.onlinewebfonts.com/t/a61ec69bbdf5f1b90bd4fde89da427b9.eot"); 
+  src: url("https://db.onlinewebfonts.com/t/a61ec69bbdf5f1b90bd4fde89da427b9.eot?#iefix") format("embedded-opentype"), 
+  url("https://db.onlinewebfonts.com/t/a61ec69bbdf5f1b90bd4fde89da427b9.woff2") format("woff2"), 
+  url("https://db.onlinewebfonts.com/t/a61ec69bbdf5f1b90bd4fde89da427b9.woff") format("woff"), 
+  url("https://db.onlinewebfonts.com/t/a61ec69bbdf5f1b90bd4fde89da427b9.ttf") format("truetype"), 
+  url("https://db.onlinewebfonts.com/t/a61ec69bbdf5f1b90bd4fde89da427b9.svg#Verveine") format("svg"); }
 
 //Import 
 @import "foundation/base.scss";
