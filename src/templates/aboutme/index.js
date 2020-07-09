@@ -15,8 +15,8 @@ function AboutMe(props) {
         <div className="page-about">
           <div className="page-about-container">
             {
-              about.map(about => (
-                <ReactMarkdown source={about.aboutText} escapeHtml={false} />
+              about.map((about, key) => (
+                <ReactMarkdown source={about.aboutText} key={key} escapeHtml={false} />
               ))
             }
           </div>
@@ -25,10 +25,10 @@ function AboutMe(props) {
             <h2 style={{ color: bgcolor }}>Me on Medium</h2>
             <div className="container">
               {
-                medium.map(article => (
+                medium.map((article, key) => (
                   <a className="card-link" href={article.mediumLink} title={article.name} key={article.name}>
                     <Card
-                      key={article.name}
+                      key={key}
                       divName={article.slug}
                       bgcolor={bgcolor} 
                       heading={article.name} 

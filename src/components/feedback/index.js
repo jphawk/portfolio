@@ -26,8 +26,8 @@ function Feedback(props) {
       <h2 style={{color:bgcolor}}>Professionals on working with me</h2>
       <Slider dots className={dots} >
         {
-          feedback.map(myfeedback => (
-            <>
+          feedback.map((myfeedback, key) => (
+            <div key={key}>
               <p className="feedback-container-rec">{myfeedback.recommendation}</p>
               <p className="feedback-container-info">
                 <a className="feedback-container-author" href={myfeedback.linkedin} title={myfeedback.author} style={{color:bgcolor}}>
@@ -36,7 +36,7 @@ function Feedback(props) {
                   <span>{myfeedback.company}</span>
                 </a> 
               </p>
-            </>
+            </div>
           )
         )
         }

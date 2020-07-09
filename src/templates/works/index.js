@@ -18,8 +18,8 @@ function WorkCase(props) {
   const ReactMarkdown = require('react-markdown/with-html');
   return (
     <div className="page">
-      {props.workcases.filter(workcase => workcase.slug === slug).map(filteredCase => (
-      <div className={filteredCase.slug}>
+      {props.workcases.filter(workcase => workcase.slug === slug).map((filteredCase, key) => (
+      <div className={filteredCase.slug} key={key}>
         <div className="page-workcase-hero">
           {filteredCase.mediumLink && 
             <React.Fragment>
