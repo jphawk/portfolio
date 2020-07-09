@@ -23,16 +23,16 @@ function WorkCase(props) {
         <div className="page-workcase-hero">
           {filteredCase.mediumLink && 
             <React.Fragment>
-            <a 
-              href={filteredCase.mediumLink} 
-              title="Read about this in Medium"
-              className="medium-link">
-                <div className="medium-link-container">
-                  <p>Read about this
-                  <span>on Medium</span></p>
-                </div>
-            </a>
-            <div className="page-workcase-arrow"></div>
+              <a 
+                href={filteredCase.mediumLink} 
+                title="Read about this in Medium"
+                className="medium-link">
+                  <div className="medium-link-container">
+                    <p>Read about this
+                    <span>on Medium</span></p>
+                  </div>
+              </a>
+              <div className="page-workcase-arrow"></div>
             </React.Fragment>}
             <Hero page="workcase" title={filteredCase.workcaseTitle} />
         </div>

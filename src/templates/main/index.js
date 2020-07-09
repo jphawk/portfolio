@@ -6,15 +6,17 @@ import Feedback from '../../components/feedback';
 import Divider from '../../components/divider';
 
 function MainPage(props) {
+  const { bgcolor, workcases, feedback } = props;
+
   return (
     <div className="page">
       <Hero page="main"/>
       <div className="page-main">
         <div className="page-main-container">
-          <Work workcases={props.workcases} bgcolor={props.bgcolor}/>
+          <Work workcases={workcases} bgcolor={bgcolor}/>
         </div>
-        <Divider bgcolor={props.bgcolor} />
-        <Feedback feedback={props.feedback} bgcolor={props.bgcolor} />
+        <Divider bgcolor={bgcolor} />
+        <Feedback feedback={feedback} bgcolor={bgcolor} />
       </div>
       <Follow page="main"/>
     </div>
