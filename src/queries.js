@@ -42,5 +42,8 @@ export const cases = `
         url
       }
     }
+    abouts {
+      aboutText
+    }
   }
 `;
