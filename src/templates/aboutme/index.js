@@ -6,7 +6,7 @@ import Divider from '../../components/divider';
 import Card from '../../components/card';
 
 function AboutMe(props) {
-  const { bgcolor, medium, feedback, about } = props;
+  const { bgcolor, medium, feedback, about, facts } = props;
   const ReactMarkdown = require('react-markdown/with-html');
   return (
     <>
@@ -16,7 +16,11 @@ function AboutMe(props) {
           <div className="page-about-container">
             {
               about.map((about, key) => (
-                <ReactMarkdown source={about.aboutText} key={key} escapeHtml={false} />
+                <React.Fragment>
+                  <ReactMarkdown source={about.aboutText} key={key} escapeHtml={false} />
+                  <h2 style={{ color: bgcolor }}>Some random facts about me</h2>
+                  <ReactMarkdown source={about.aboutFacts} key={key} escapeHtml={false} />
+                </React.Fragment>
               ))
             }
           </div>

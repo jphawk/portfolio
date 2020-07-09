@@ -44,6 +44,7 @@ export const cases = `
     }
     abouts {
       aboutText
+      aboutFacts
     }
   }
 `;
