@@ -19,6 +19,9 @@
      }
     .divider {
       padding:0;
+      @media screen and (min-width: 920px) {
+        margin:0 -40px;
+      }
     }
   }
 
@@ -42,10 +45,10 @@
     
     @media screen and (min-width: 600px) {
       padding:60px 40px;
-      min-height:210px;
+      min-height:190px;
     }
     @media screen and (min-width: 920px) {
-      min-height:185px;
+      min-height:175px;
     }
     h2 {
       margin-top:0;
