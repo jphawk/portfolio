@@ -44,7 +44,11 @@ export const cases = `
     }
     abouts {
       aboutText
-      aboutFacts
+      fact1
+      fact2
+      fact3
+      fact4
+      fact5
     }
   }
 `;
