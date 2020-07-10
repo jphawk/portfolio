@@ -21,7 +21,10 @@ function AboutMe(props) {
               about.map((about, key) => {
                 return(
                   <React.Fragment>
-                    <ReactMarkdown source={about.aboutText} key={key} escapeHtml={false} />
+                    <div className="page-about-box">
+                      <ReactMarkdown source={about.aboutText} key={key} escapeHtml={false} />
+                      <h3>Check my CV on <a style={{ color: bgcolor }} href="https://www.linkedin.com/in/elena-kazakova-uxdev/" title="My CV">LinkedIn</a></h3>
+                    </div>
                     <Divider bgcolor={bgcolor} />
                     <div className="about-random">
                       <h2 style={{ color: bgcolor }}>A random fact about me</h2>
