@@ -2,6 +2,7 @@ export const cases = `
   {
     workcases {
       id
+      tags
       slug
       workcaseTitle
       workcaseDescription
