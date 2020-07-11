@@ -3,6 +3,7 @@ import Hero from '../../components/hero';
 import Follow from '../../components/follow';
 import Gallery from 'react-grid-gallery';
 import { useParams } from 'react-router-dom';
+import ModalImage from "react-modal-image";
 
 function WorkCase(props) {
   const { slug } = useParams();
