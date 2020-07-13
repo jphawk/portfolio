@@ -38,16 +38,16 @@ function WorkCase(props) {
         </div>
         <div className="page-workcase">
           <div className="page-workcase-container">
-            <div className="tags">
-              {filteredCase.tags && <h3 style={{color: props.bgcolor}}>Stack, techniques and tools:</h3>}
-              <ReactMarkdown source={filteredCase.tags && filteredCase.tags.toString()} escapeHtml={false} />
-            </div>
             <ReactMarkdown source={filteredCase.workcaseContentHtml && filteredCase.workcaseContentHtml.toString()} escapeHtml={false} />
             {filteredCase.gallery && 
               <div className="gallery-container">
                 <Gallery images={imagesQuery} enableImageSelection={false} />
               </div>
             }
+                      <div className="tags">
+            {filteredCase.tags && <h3 style={{color: props.bgcolor}}>Stack, techniques and tools:</h3>}
+            <ReactMarkdown source={filteredCase.tags && filteredCase.tags.toString()} escapeHtml={false} />
+          </div>
           </div>
         </div>
         <Follow />

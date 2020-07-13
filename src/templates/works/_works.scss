@@ -42,6 +42,21 @@
     }
   }
 
+  .tags {
+    margin-top:40px;
+    h3 {
+      margin-top:0;
+    }
+    span {
+      display:inline-flex;
+      padding: 8px;
+      margin-right:10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
   &-arrow {
     background-image: url("https://media.graphcms.com/rJz4Wfj6T4OQ0qoh2HgD");
     background-repeat: no-repeat;
@@ -209,5 +224,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.intergalactico {
+  .width-100 {
+    iframe {
+      width:100%;
+      @media screen and (min-width: 600px) {
+        max-width: 678px;
+        min-height:407px;
+      }
+    }
+  }
+  img {
+    &.img-small {
+      max-width:200px;
+    }
+  }
+}
+
+.gnui {
+  .width-100 {
+    iframe {
+      width:100%;
+      @media screen and (min-width: 600px) {
+        max-width: 678px;
+        min-height:420px;
+      }
+    }
+  }
+  img {
+    &.img-small {
+      max-width:400px;
+    }
+    &.img-medium {
+      max-width:500px;
+    }
   }
 }
