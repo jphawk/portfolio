@@ -3,7 +3,10 @@
   background-color: #F5F8F2;
   p {
    max-width: 820px;
-   margin:0 auto;   
+   margin:0 auto;
+   &.feedback-container-info {
+    margin-top: 1rem;
+   }   
   }
   .card {
     p {
