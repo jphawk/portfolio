@@ -57,7 +57,6 @@ function AboutMe(props) {
               )}
             </div>
           </div>
-          <Divider bgcolor={bgcolor} />
           <Feedback feedback={feedback} bgcolor={bgcolor} />
         </div>
       </div>

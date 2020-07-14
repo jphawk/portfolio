@@ -263,3 +263,44 @@
     }
   }
 }
+
+.flexalex {
+  img {
+    width:100%;
+    max-width: 400px;
+    margin-top:0;
+    @media screen and (min-width: 600px) {
+      width:400px;
+    }
+  }
+  hr {
+    border-top:1px solid #dcdfd9;
+  }
+  .flex {
+    padding: 40px 0;
+    display:block;
+
+    &.flex-first {
+      margin-top:20px;
+    }
+    &.flex-last {
+      margin-bottom:20px;
+    }
+
+    @media screen and (min-width: 760px) {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      p {
+        margin-left:40px;
+      }
+      &.flex-first {
+        margin-top:40px;
+      }
+      &.flex-last {
+        margin-bottom:40px;
+      }
+    }
+  }
+}
