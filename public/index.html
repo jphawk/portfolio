@@ -10,8 +10,13 @@
       name="description"
       content="Welcome to my portfolio!"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <title>Elena's Portfolio</title>
+    <script>
+      var host = "www.elena-kazakova.pro" || "elena-kazakova.pro";
+      if ((host == window.location.host) && (window.location.protocol != "https:")){
+      window.location.protocol = "https";
+      }
+    </script>
   </head>
   <body>
     <div id="portfolio"></div>
