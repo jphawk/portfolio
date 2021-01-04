@@ -157,13 +157,13 @@
 }
 
 .ReactGridGallery {
-  min-height:940px;
+  min-height:1080px;
 
   @media screen and (min-width: 600px) {
-    min-height:600px;
+    min-height:700px;
   }
   @media screen and (min-width: 920px) {
-    min-height:400px;
+    min-height:520px;
   }
 }
 
