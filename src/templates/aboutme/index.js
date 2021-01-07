@@ -23,7 +23,6 @@ function AboutMe(props) {
                   <React.Fragment>
                     <div className="page-about-box">
                       <ReactMarkdown source={about.aboutText} key={key} escapeHtml={false} />
-                      <h3>Check my CV on <a style={{ color: bgcolor }} href="https://www.linkedin.com/in/elena-kazakova-uxdev/" title="My CV">LinkedIn</a></h3>
                     </div>
                     <Divider bgcolor={bgcolor} />
                     <div className="about-random">
