@@ -26,7 +26,8 @@ function WorkCase(props) {
               <a 
                 href={filteredCase.mediumLink} 
                 title="Read about this in Medium"
-                className="medium-link">
+                className="medium-link"
+                target="_blank">
                   <div className="medium-link-container">
                     <p>Read about this
                     <span>on Medium</span></p>

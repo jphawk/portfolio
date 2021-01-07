@@ -19,7 +19,7 @@ const OnMedium = (props) => {
           <div className="page-medium-container">
             {
               mediumFiltered.map((article, key) => (
-                <a className="card-link" href={article.mediumLink} title={article.name} key={article.name}>
+                <a className="card-link" href={article.mediumLink} title={article.name} key={article.name} target="_blank">
                   <Card
                     key={key}
                     divName={article.slug}

@@ -30,9 +30,9 @@ function Feedback(props) {
             <div key={key}>
               <p className="feedback-container-rec">{myfeedback.recommendation}</p>
               <p className="feedback-container-info">
-                <a className="feedback-container-author" href={myfeedback.linkedin} title={myfeedback.author} style={{color:bgcolor}}>
+                <a className="feedback-container-author" href={myfeedback.linkedin} title={myfeedback.author} style={{color:bgcolor}} target="_blank">
                   <span>{myfeedback.author}</span>
-                </a>, {myfeedback.title} at <a className="feedback-container-author" href={myfeedback.companyLink} title={myfeedback.company} style={{color:bgcolor}}>
+                </a>, {myfeedback.title} at <a className="feedback-container-author" href={myfeedback.companyLink} title={myfeedback.company} target="_blank" style={{color:bgcolor}}>
                   <span>{myfeedback.company}</span>
                 </a> 
               </p>

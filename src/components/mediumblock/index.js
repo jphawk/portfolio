@@ -16,7 +16,7 @@ function Medium(props) {
         <div className="container">
           {
             mediumFiltered.slice(0,3).map((article, key) => (
-              <a className="card-link" href={article.mediumLink} title={article.name} key={article.name}>
+              <a className="card-link" href={article.mediumLink} title={article.name} key={article.name} target="_blank">
                 <Card
                   key={key}
                   divName={article.slug}
