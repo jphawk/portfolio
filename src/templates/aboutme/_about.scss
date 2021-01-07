@@ -39,7 +39,7 @@
       padding-top:20px;
       @include grid-card;
       @media screen and (min-width: 600px) {
-        padding-top:50px;
+        padding:50px 40px;
       }
     }
   }

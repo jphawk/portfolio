@@ -8,6 +8,7 @@ import Header from './components/header';
 import { randomColor } from './foundation';
 import { cases } from './queries';
 import { request } from 'graphql-request';
+import OnMedium from './templates/medium';
 
 const GRAPHCMS_API = 'https://api-eu-central-1.graphcms.com/v2/ckbg8zpxy3l2w01xy58y004vm/master';
 
@@ -48,6 +49,7 @@ function App() {
                 <Route path="/work" render={() => <Work workcases={workcases} bgcolor={newColor} />} />
                 <Route path="/works/:slug" render={() => <WorkCase workcases={workcases} bgcolor={newColor} misc={galleryMiscs} />} />
                 <Route path="/about" render={() => <AboutMe about={abouts} feedback={feedbacks} bgcolor={newColor} medium={mediumArticles} />} />
+                <Route path="/medium" render={() => <OnMedium medium={mediumArticles} bgcolor={newColor} />} />
               </Switch>
             </div>
           }

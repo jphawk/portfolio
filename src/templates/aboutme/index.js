@@ -3,11 +3,11 @@ import Hero from '../../components/hero';
 import Follow from '../../components/follow';
 import Feedback from '../../components/feedback';
 import Divider from '../../components/divider';
-import Card from '../../components/card';
+import Medium from '../../components/mediumblock';
 import { randomColor } from '../../foundation';
 
 function AboutMe(props) {
-  const { bgcolor, medium, feedback, about } = props;
+  const { bgcolor, feedback, about, medium } = props;
   const newRandom = [about[0].fact1, about[0].fact2, about[0].fact3, about[0].fact4, about[0].fact5];
   const [random, randomFact] = useState(randomColor(newRandom));
   const ReactMarkdown = require('react-markdown/with-html');
@@ -38,25 +38,10 @@ function AboutMe(props) {
           </div>
 
           <Divider bgcolor={bgcolor} />
-          <div className="medium-articles">
-            <h2 style={{ color: bgcolor }}>Me on Medium</h2>
-            <div className="container">
-              {
-                medium.map((article, key) => (
-                  <a className="card-link" href={article.mediumLink} title={article.name} key={article.name}>
-                    <Card
-                      key={key}
-                      divName={article.slug}
-                      bgcolor={bgcolor} 
-                      heading={article.name} 
-                      img={article.image.url} 
-                      description={article.description} 
-                    />
-                  </a>
-                )
-              )}
-            </div>
-          </div>
+
+          <Medium medium={medium} bgcolor={bgcolor} />
+          <Divider bgcolor={bgcolor} />
+
           <Feedback feedback={feedback} bgcolor={bgcolor} />
         </div>
       </div>

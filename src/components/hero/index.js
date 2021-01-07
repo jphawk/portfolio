@@ -30,6 +30,13 @@ function Hero(props) {
             </div>
           </div>
         }
+        { props.page === "medium" && 
+          <div className="hero-text nomain">
+            <div className="background">
+              <h1>Me on Medium</h1>
+            </div>
+          </div>
+        }
         { props.page === "workcase" && 
           <div className="hero-text nomain">
             <div className="background">
