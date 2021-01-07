@@ -282,16 +282,17 @@ a {
 @mixin grid-card {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: 1fr;
     grid-row-gap:20px;
 
     @media screen and (min-width: 600px) {
       grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 1fr;
       column-gap: 4%;
       grid-row-gap:30px;
     }
     @media screen and (min-width: 880px) {
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 3%;
+      grid-auto-rows: 1fr;
     }
 }
