@@ -244,6 +244,14 @@
   }
 }
 
+.climatemove {
+  img {
+    &.img-small {
+      max-width:500px;
+    }
+  }
+}
+
 .gnui {
   .width-100 {
     iframe {
