@@ -13,7 +13,6 @@
     "html-parser": "^0.11.0",
     "html-to-react": "^1.4.3",
     "infinite-react-carousel": "^1.2.11",
-    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-grid-gallery": "^0.5.5",
@@ -34,5 +33,7 @@
     "extends": "react-app"
   },
   "browserslist": [],
-  "devDependencies": {}
+  "devDependencies": {
+    "sass": "^1.54.4"
+  }
 }
